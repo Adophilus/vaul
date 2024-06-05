@@ -2,22 +2,8 @@
   "name": "vaul",
   "version": "0.9.1",
   "description": "Drawer component for React.",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
-  "exports": {
-    "import": {
-      "types": "./dist/index.d.mts",
-      "default": "./dist/index.mjs"
-    },
-    "require": {
-      "types": "./dist/index.d.ts",
-      "default": "./dist/index.js"
-    }
-  },
+  "main": "./src/index.tsx",
+  "type": "module",
   "scripts": {
     "type-check": "tsc --noEmit",
     "build": "pnpm type-check && bunchee",
@@ -54,6 +40,7 @@
     "prettier": "^2.5.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "scheduler": "^0.23.2",
     "turbo": "1.6",
     "typescript": "5.2.2"
   },
