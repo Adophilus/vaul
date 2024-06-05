@@ -353,7 +353,6 @@ function Root({
 
   React.useEffect(() => {
     function onVisualViewportChange() {
-      console.log('injected by me')
       if (!drawerRef.current) return;
 
       const focusedElement = document.activeElement as HTMLElement;
@@ -393,7 +392,8 @@ function Root({
             drawerRef.current.style.height = `${Math.max(newDrawerHeight, visualViewportHeight - offsetFromTop)}px`;
           }
         } else {
-          drawerRef.current.style.height = `${initialDrawerHeight.current}px`;
+          // drawerRef.current.style.height = `${initialDrawerHeight.current}px`;
+          drawerRef.current.style.height = `auto`;
         }
 
         if (snapPoints && snapPoints.length > 0 && !keyboardIsOpen.current) {
