@@ -353,6 +353,7 @@ function Root({
 
   React.useEffect(() => {
     function onVisualViewportChange() {
+      console.log('injected by me')
       if (!drawerRef.current) return;
 
       const focusedElement = document.activeElement as HTMLElement;
